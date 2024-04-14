@@ -1,0 +1,12 @@
+<sly data-sly-use.clientlib="/libs/granite/sightly/templates/clientlib.html"/>
+<sly data-sly-call="${clientlib.js @ categories='aemgeeks.components.statedropdown'}"/>
+<br><br><center><h1 id="pageTitle"> </h1></center><br>
+<!--<form method="GET" action="/bin/currentpage">
+<input type="submit" value="Send Request"/></form>-->
+<br><div data-sly-use.statedropdown="com.aem.geeks.core.models.StateDropdown">
+<center><select name="States" id="states" value="Select State">
+	<option selected disabled hidden>Select State</option>
+	<div data-sly-list.item="${statedropdown.states}">
+  		<option value="${item}">${item}</option>
+	</div>
+</select></center><br>
